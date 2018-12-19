@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>Bnaya.Samples</RootNamespace>
+    <AssemblyName>influx-reporter</AssemblyName>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>Build\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>Build\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bnaya.CSharp.AsyncExtensions" Version="1.0.25" />
+    <PackageReference Include="Bnaya.CSharp.DockerExtensions.Core" Version="1.0.2" />
+    <PackageReference Include="InfluxDB.Collector" Version="1.1.1-dev-10109" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Kubernetes.Tools.Targets" Version="0.31.0" />
+  </ItemGroup>
+
+</Project>
